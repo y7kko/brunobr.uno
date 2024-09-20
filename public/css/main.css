@@ -1,0 +1,70 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
+
+body {
+  background: rgba(0, 0, 0, .2) url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHJUtcgiDyARHjo2zsSeXe7uRt1xZVcZhz1p7PyCG81XF0o7LolUtujQY5ZycIKq2MmeFPnlFdnzdAzFlV0QbkJfAQIa83-XtgFGVVD0Q4W-RRVB55v3_xO9sVT_vFGsGIzKpmBrnwOggG6SmlBq0Sb8mFJhVgPJW-x9OuX7lp_w14jqfMSmBvGL0VvnX8/s1600/bg_img.jpg');
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/*
+A margem mais externa do site
+Não lembro qq isso faz sinceramente
+*/
+.margens{
+  display: grid;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+}
+
+footer {
+  box-sizing: border-box;
+  position:relative;
+  background-color:transparent;
+  width:100%;
+  max-width:100%;  
+  height:auto;
+  padding-left:0%;
+  /*border: 5px solid red;*/
+}
+
+@media only screen and (min-width: 768px) {
+  .margens{
+      width:50%;
+      margin-left:auto;
+      margin-right:auto;
+      overflow: hidden;
+      /*height:100vh;*/
+  }
+  /*Acredito que seja sobre o container de posts do blogger*/
+  .link#divcontent{
+      width:50%
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .margens{
+      width:100%;
+      /*margin-left: 0px;*/
+      position: relative;
+      box-sizing: border-box;
+      justify-content: center;
+      margin-top:auto;
+      margin-bottom:auto;
+  }
+.link#texto{font-size:small;}
+}
+
+
+/* Link highlighting e tal */
+a{text-decoration: none;}
+a:link{color:#0D0D0D}
+a:visited{color:#0D0D0D;}
+a:visited:hover {color:#FF7E00}
+a:hover{color:#FF7E00;}

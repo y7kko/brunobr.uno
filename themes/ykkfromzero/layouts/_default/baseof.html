@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+  
+  {{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+  {{ end }}
+
+  <link rel="icon" href="{{ "my-icon.png" | absURL }}" sizes="32x32" type="image/png">
+
+
+</head>
+<body>
+  <div class="margens">
+    <header>
+      {{ partial "header.html" . }}
+    </header>
+    {{/*  <main>  */}}
+      {{ block "main" . }}{{ end }}
+    {{/*  </main>  */}}
+    <footer>
+      {{ partial "footer.html" . }}
+    </footer>
+  </div>
+</body>
+</html>

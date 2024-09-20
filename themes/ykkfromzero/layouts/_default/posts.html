@@ -1,0 +1,58 @@
+{{ define "main" }}
+  <style>
+    .toc{
+      font-family: 'Goldman', cursive;
+      box-sizing: border-box;
+
+      margin-left: 0px;
+      margin-right: 0px;
+      text-align: left;
+      vertical-align: middle;
+      line-height:auto;
+
+      padding-left: 1%;
+
+      width:100%;
+      max-width:100%;
+      height:auto;
+
+      background-color:#ffffff;
+      border-left:solid 1px white;
+    }
+
+
+  </style>
+    <div class="toc">
+      <div style="text-align: center;font-family: 'Yuji Syuku', serif;font-size:medium;letter-spacing: 0.1pt;line-height: 12pt;">
+        {{ .Content }}
+      </div>
+      
+      <br>
+      <br>
+      
+      {{ with .Site.GetPage "posts" }}
+      <div style="text-align: center;">
+        <a href='{{ .Permalink }}'>tags</a>
+      </div>
+      {{ end }}
+    
+      {{ range .Pages }}
+        {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+        {{ $dateHuman := .Date | time.Format ":date_long" }}
+          
+        <h3 style="margin-block-end: 0.13em;">
+          <a href="{{ .RelPermalink }}">
+            {{ .LinkTitle }} 
+          </a>
+        </h3>
+        <time style="font-size:small" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+        
+        <br>
+        
+        <div style="font-family: 'Yuji Syuku', serif;font-size:medium;letter-spacing: 0.1pt;line-height: 12pt;">
+          {{ .Summary }}
+        </div>
+        <br>
+      {{ end }}
+    </div>
+{{ end }}

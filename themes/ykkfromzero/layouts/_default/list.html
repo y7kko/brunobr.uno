@@ -1,0 +1,35 @@
+{{ define "main" }}
+  <style>
+    .toc{
+        font-family: 'Goldman', cursive;
+        box-sizing: border-box;
+
+        margin-left: 0px;
+        margin-right: 0px;
+        text-align: left;
+        vertical-align: middle;
+        line-height:auto;
+
+        padding-left: 1%;
+
+        width:100%;
+        max-width:100%;
+        height:auto;
+
+        background-color:#ffffff;
+        border-left:solid 1px white;
+    }
+    
+  </style>
+  <div class="toc">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    {{ range .Pages }}
+      <h4><a href="{{ .RelPermalink }}"> {{ .LinkTitle }} </a></h4>
+      <div style="font-family: 'Roboto', sans-serif;">
+        {{ .Summary }}
+      </div>
+    {{ end }}
+  </div>
+
+{{ end }}

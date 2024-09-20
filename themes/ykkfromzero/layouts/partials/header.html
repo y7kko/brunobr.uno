@@ -1,0 +1,47 @@
+{{/*  <h1>{{ site.Title }}</h1>
+{{ partial "menu.html" (dict "menuID" "main" "page" .) }}  */}}
+
+
+{{/*  Uma gambiarra do caralho que eu fiz no blogger e vou jogar aqui  */}}
+<style>
+    #imgcab{
+        box-sizing: border-box;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    
+        width:100%;
+        max-width:100%;
+        height:auto;
+    }
+    .header_image {
+        background-color:transparent;
+        height:auto;
+        padding-left:0%;
+        {{/*  border: 5px solid red;  */}}
+      }
+    
+    .header_subtitle {
+    font-family: 'Yuji Syuku', serif;
+    font-size:medium;
+    color:#0D0D0D;
+    background-color:white;
+    height:auto;
+    line-height: normal;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align:center;
+    {{/*  border: 5px solid red;  */}}
+    }
+</style>
+
+{{/*  POSTERIORMENTE LINKAR O href ATRAVÈS DOS COMANDOS DO GO  */}}
+<div class="header_image">
+    <a href='{{ .Site.Home.RelPermalink }}'>
+        <img id='imgcab' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg51FIskHXGj4_MT2nqAypE4ksY-42Ul0lw2D6Cj5le-2eNUhJo1dZP_81ba49cFaxAQMuphNXsz19nu9mAIWTcR0D1tUSm-JColkwtimQ0O4-l1BTm43KRn_-00DiAHuNo3LkPbsvDEmsfurPoEJpIGOAl7GmvxOfcbcn7CLTQlKp-hDVpC-PzA2z9j99w/s1600/y7kkohead_2024.png'/>
+    </a>
+</div>
+
+<div class="header_subtitle">
+    totalmente computer music das ideia
+</div>
