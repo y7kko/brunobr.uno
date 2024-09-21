@@ -10,10 +10,9 @@
         vertical-align: middle;
         line-height:auto;
 
-        padding-left: 1%;
 
         width:100%;
-        max-width:100%;
+        min-width: 100%;
         height:auto;
 
         background-color:#ffffff;
@@ -23,7 +22,9 @@
   </style>
   <div class="toc">
     <h1>{{ .Title }}</h1>
-    {{ .Content }}
+    <div style="text-align: center;font-family: 'Yuji Syuku', serif;font-size:medium;letter-spacing: 0.1pt;line-height: 12pt;">
+      {{ .Content }}
+    </div>
     <br>
     <br>
 
@@ -35,6 +36,6 @@
       
       <br>
     {{ end }}
+    <div style="visibility: hidden; width: 700px;height:1px;"></div>
   </div>
-
 {{ end }}
