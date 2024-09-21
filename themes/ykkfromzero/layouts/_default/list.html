@@ -24,11 +24,16 @@
   <div class="toc">
     <h1>{{ .Title }}</h1>
     {{ .Content }}
+    <br>
+    <br>
+
     {{ range .Pages }}
       <h3 style="margin-block-end: 0.13em;"><a href="{{ .RelPermalink }}"> {{ .LinkTitle }} </a></h3>
       <div style="font-family: 'Yuji Syuku', serif;font-size:medium;letter-spacing: 0.1pt;line-height: 12pt;">
         {{ .Summary }}
       </div>
+      
+      <br>
     {{ end }}
   </div>
 
