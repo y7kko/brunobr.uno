@@ -1,17 +1,19 @@
 baseURL = 'https://brunobr.uno/'
 languageCode = 'pt-br'
-title = 'Bruno Silva'
+title = 'Bruno'
 theme = 'ykkfromzero'
 
 
 [params]
-  favicon="favicon.ico"
+  favicon="favicon.png"
   math = true
 
 
 # Enabling math
 [markup]
   [markup.goldmark]
+    [markup.goldmark.renderer]
+        unsafe = true
     [markup.goldmark.extensions]
       [markup.goldmark.extensions.passthrough]
         enable = true

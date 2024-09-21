@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; background-image: url('bg_img.jpg');}
+            #c {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+		</style>
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.module.js",
+                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.168.0/examples/jsm/"
+                }
+            }
+        </script>
+	</head>
+	<body>
+        <div style="position: relative;">
+            <canvas id="c"></canvas>
+            <img src="y7kklogo.svg" 
+       style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 50%;
+       " />
+
+        </div>
+        <script type="module" src="main.js"></script>
+	</body>
+</html>
