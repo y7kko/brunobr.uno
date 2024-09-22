@@ -49,21 +49,26 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     uv.x *= aspect;
     uv.x -= aspect;
     uv.y += 1.0;
-    float t = -iTime*7.0;
+    float t = -iTime*20.0;
     
-    float pixelize = 4.0;
+    float pixelize = 7.0;
     vec2 uvd = uv*pixelize;
     uvd = floor(uvd);
-    vec2 uvf = fract(uv);
+    vec2 uvf = fract(uv/2.0);
 
     float selector = abs(rand_linterp(t));
     float uvd_m = dot(uvd,uvd.yx+uvd.xx+16.52);
     float col = (
-            rand_linterp(0.3*uvf+15.5*length(uvd)+t+7.0*randm(uvd))
+            rand_linterp(0.3*uvf+1.0*length(uvd)+t+0.1*randm(uvd))
             ); //alterar os pesos dos argumentos muda a quantidade de caos e ordem
 
+	if (col < 0.3){
+		col = 0.0;
+		}
+
+
     // Output to screen
-    float denominator = pixelize*abs(0.3*cos(t/4.0)+3.0);
+    float denominator = pixelize*abs(0.0*cos(t/4.0)+3.0);
     float fade = mix(4.0,0.0,length(uvd)/denominator);
     fragColor = vec4(col)*fade;
 }
