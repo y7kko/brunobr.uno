@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Hugo Server(mobile)",  // Nome da task
+            "type": "shell",
+            "command": "hugo server --bind 192.168.0.104 --baseURL http://192.168.0.104 --port 8080",    // Comando para rodar o servidor Hugo
+            "group": {
+                "kind": "build",         // Opcional: agrupa como tarefa de build
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "detail": "Executa o servidor Hugo localmente."
+        }
+    ]
+}

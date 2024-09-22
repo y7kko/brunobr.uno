@@ -51,7 +51,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     uv.x *= aspect;
     uv.x -= aspect;
     uv.y += 1.0;
-    float t = -iTime*20.0;
+    float t = -fract(iTime*0.1)*20.0;
     
     float pixelize = 7.0;
     vec2 uvd = uv*pixelize;
