@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>misc on Bruno</title>
+    <link>http://localhost:8080/tags/misc/</link>
+    <description>Recent content in misc on Bruno</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 20 Sep 2024 18:27:09 -0300</lastBuildDate>
+    <atom:link href="http://localhost:8080/tags/misc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Primeira Postagem</title>
+      <link>http://localhost:8080/posts/first_post/</link>
+      <pubDate>Fri, 20 Sep 2024 18:27:09 -0300</pubDate>
+      <guid>http://localhost:8080/posts/first_post/</guid>
+      <description>Sobre o blog e meus planos para ele</description>
+    </item>
+  </channel>
+</rss>

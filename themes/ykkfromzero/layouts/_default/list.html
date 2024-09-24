@@ -63,13 +63,29 @@
     <br>
 
     {{ range .Pages }}
+
+    
+    
+    {{ $path := "thumb.png" }}
+    
     <div class="content">
       <div id="content_thumb">
-        <img src="/dummy.png" style="width: 90%; "/>
+        <a href="{{ .RelPermalink }}">
+
+        {{ with .Resources.Get $path }}
+          <img src="{{ .RelPermalink }}" style="width: 90%; "/>
+        {{ else }}
+          <img src="/dummy.png" style="width: 90%; "/>
+        {{ end }}
+        </a>
       </div>
       
       <div id="content_info">
-        <h3 style="margin-block-end: 0.13em;"><a href="{{ .RelPermalink }}"> {{ .LinkTitle }} </a></h3>
+        <h3 style="margin-block-end: 0.13em;">
+          <a href="{{ .RelPermalink }}"> 
+            {{ .LinkTitle }} 
+          </a>
+        </h3>
         <div style="font-family: 'Yuji Syuku', serif;font-size:medium;letter-spacing: 0.1pt;line-height: 12pt;">
           {{ .Summary }}
         </div>

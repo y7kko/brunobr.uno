@@ -2,8 +2,8 @@
 title = 'Fragment Shaders e Compatibilidade com mobile'
 date = 2024-09-22T12:04:25-03:00
 draft = true
-summary = ''
-tags = ['visual','programacao','GLSL']
+summary = ' '
+tags = ['visual','programacao']
 +++
 
 Faz bem deixar aqui, vai que alguém tenha o mesmo problema... 
